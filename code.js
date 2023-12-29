@@ -13,7 +13,7 @@ document.querySelectorAll('button').forEach(elem =>{
             Your browser does not support the audio element.
         </audio>
         <!-- Jak nie pisać kodu -->
-        <button onclick="(parseInt(document.getElementById('src').src.substring(document.getElementById('src').src.lastIndexOf('/')+1))<3)?document.getElementById('src').src=document.getElementById('src').src.substring(document.getElementById('src').src.lastIndexOf('songs/'),document.getElementById('src').src.lastIndexOf('/')+1)+(parseInt(document.getElementById('src').src.substring(document.getElementById('src').src.lastIndexOf('/')+1,document.getElementById('src').src.lastIndexOf('.')))+1)+'.mp3':console.log('1')"> > </button>
+        <button onclick="(parseInt(document.getElementById('src').src.substring(document.getElementById('src').src.lastIndexOf('/')+1))<3)?(document.getElementById('src').src=document.getElementById('src').src.substring(document.getElementById('src').src.lastIndexOf('songs/'),document.getElementById('src').src.lastIndexOf('/')+1)+(parseInt(document.getElementById('src').src.substring(document.getElementById('src').src.lastIndexOf('/')+1,document.getElementById('src').src.lastIndexOf('.')))+1)+'.mp3') && document.getElementById('src').parentElement.load():console.log('1')"> > </button>
         <div>
             <div onclick="this.textContent = '${songsTitles[parseInt(elem.innerText)-1]}'">Zgaduje</div>
         </div>
