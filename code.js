@@ -5,7 +5,6 @@ let songsTitles = [
 ]
 document.querySelectorAll('button').forEach(elem =>{
     elem.onclick= ()=>{
-        let num = 1
         console.log(songsTitles[parseInt(elem.innerText)-1],parseInt(elem.innerText))
         document.querySelector('.menuselection').innerHTML=`
         <button onclick="window.location.reload()">Powrót</button>
