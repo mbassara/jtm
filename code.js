@@ -9,7 +9,7 @@ document.querySelectorAll('button').forEach(elem =>{
         document.querySelector('.menuselection').innerHTML=`
         <button onclick="window.location.reload()">Powrót</button>
         <audio controls>
-            <source id="src" src="songs/Zawsze%20Tam%20Gdzie%20Ty/1.mp3" type="audio/mp3">
+            <source id="src" src="songs/${encodeURIComponent(songsTitles[parseInt(elem.innerText)-1])}/1.mp3" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
         <!-- Jak nie pisać kodu -->
