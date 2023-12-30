@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaka To Melodia</title>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="login-panel">
+    <h1>Jaka to melodia</h1>
+    <button class="btn btn-primary" onclick="loginToSpotify()">Zaloguj się na Spotify</button>
+    <div id="status"></div>
+</div>
+
+<div id="playlist" style="display: none;">
+    <h2>Your Playlist</h2>
+    <button onclick="selectNextRandomTrack()">Select Next Random Track</button>
+    <button onclick="playSelectedTrack(startTime=0)">Play Selected Track</button>
+    <button onclick="pausePlayback()">Pause Playback</button>
+    <button onclick="resumePlayback()">Resume Playback</button>
+    <button onclick="playSelectedTrack(12000,3000)">Play Selected Track with Params</button>
+    <button onclick="playSelectedTrack(12000,6000)">Play Selected Track with Params</button>
+    <button onclick="playSelectedTrack(12000,9000)">Play Selected Track with Params</button>
+    <button onclick="showCurrentSong()">Show Currently Selected Song</button>
+    <p id="songsLeft"></p>
+    <div id="currentSelectedSongInfo" style="display: none;">
+        <p><strong>Currently Selected:</strong></p>
+        <p id="selectedSongName"></p>
+        <p id="selectedArtistName"></p>
+    </div>
+</div>
+
+<script src="code.js"></script>
+
+</body>
+</html>

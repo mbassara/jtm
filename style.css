@@ -2,36 +2,12 @@
     margin: 0 0 0 0;
 }
 body{
-    background: #721a6e;
+    /* background: #1db954; */
+    background: #191414;
     display: grid;
     place-items: center;
     height: 100vh; /* Ensure full viewport height */
 }
 h1{
     text-align: center;
-}
-.menuselection{
-    display: flex;
-    flex-direction: column;
-    border-radius: 12px;
-    width: max(55%);
-    height: fit-content;
-    background: rgba(255, 0, 0, 0.49);
-}
-.levels{
-    display: grid;
-    align-self: center;
-    transform: translateX(-22.5%);
-    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
-    gap: 20px; /* Adjust the spacing between buttons */
-    padding: 20px; /* Optional padding for the entire container */
-    max-width: 600px;
-
-}
-
-.levels > button{
-    text-align: center; /* Center text inside the button */
-    font-size: 2em;
-    width: 5em;
-    aspect-ratio: 1/1;
 }
