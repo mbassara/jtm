@@ -144,7 +144,7 @@ function selectNextRandomTrack() {
     selectedTrack = getRandomElement(remainingTracks);
     updateSongsLeft();
     updateCurrentSelectedSongInfo(selectedTrack.track);
-
+    player.pause();
 }
 
 function playSelectedTrack(startTime = 0, duration = -1) {
