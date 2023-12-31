@@ -1,5 +1,5 @@
 const clientId = 'cdb5e80c48a141e08ffc3e293a61e6c3';
-const redirectUri = 'http://0.0.0.0:8000/spot.html';
+const redirectUri = 'https://n-kodem.github.io/JakaToMelodia/';
 const scope = 'user-read-private user-read-email user-library-read streaming';
 const playlistId = '3tWgWGnvuRWXyrZZAHYhWU'; // https://open.spotify.com/playlist/3tWgWGnvuRWXyrZZAHYhWU?si=0a540948ec8a47c8
 
