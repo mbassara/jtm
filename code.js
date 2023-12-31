@@ -43,7 +43,7 @@ function handleAccessToken(hash) {
 
 function initializePlayer() {
     player = new Spotify.Player({
-        name: 'Web Playback SDK',
+        name: 'Jaka To Melodia',
         getOAuthToken: cb => { cb(accessToken); }
     });
 
