@@ -26,3 +26,6 @@ object {
 img[type="image/svg+xml"]{
     filter: invert(100%) brightness(200%);
 }
+.media{
+    visibility: hidden;
+}

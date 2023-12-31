@@ -148,6 +148,9 @@ function selectNextRandomTrack() {
 }
 
 function playSelectedTrack(startTime = 0, duration = -1) {
+    document.querySelectorAll('.media').forEach(elem=>{
+        elem.style.visibility='visible';
+    })
     if (selectedTrack && selectedTrack.track) {
         const uri = selectedTrack.track.uri;
         fetch(`https://api.spotify.com/v1/me/player/play?device_id=${deviceId}`, {
