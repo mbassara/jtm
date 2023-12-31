@@ -20,15 +20,15 @@
 </div>
 
 <div id="playlist" style="display: none;">
-    <h2>Your Playlist</h2>
-    <button onclick="selectNextRandomTrack()">Select Next Random Track</button>
-    <button onclick="playSelectedTrack(startTime=0)">Play Selected Track</button>
-    <button onclick="pausePlayback()">Pause Playback</button>
-    <button onclick="resumePlayback()">Resume Playback</button>
-    <button onclick="playSelectedTrack(12000,3000)">Play Selected Track with Params</button>
-    <button onclick="playSelectedTrack(12000,6000)">Play Selected Track with Params</button>
-    <button onclick="playSelectedTrack(12000,9000)">Play Selected Track with Params</button>
-    <button onclick="showCurrentSong()">Show Currently Selected Song</button>
+    <h2 id="playlist-name">Your Playlist</h2>
+    <button class="btn btn-primary" onclick="selectNextRandomTrack()"><img src="icons/dice.svg" type="image/svg+xml" alt="Select next track"></button>
+    <button class="btn btn-primary" onclick="playSelectedTrack(startTime=0)"><img src="icons/play-circle.svg" type="image/svg+xml" alt="Play from start"></button>
+    <button class="btn btn-primary" onclick="pausePlayback()"><img src="icons/pause.svg" type="image/svg+xml" alt="Pause"></button>
+    <button class="btn btn-primary" onclick="resumePlayback()"><img src="icons/play.svg" type="image/svg+xml" alt="Resume"></button>
+    <button class="btn btn-primary" onclick="playSelectedTrack(12000,3000)">3s</button>
+    <button class="btn btn-primary" onclick="playSelectedTrack(12000,6000)">6s</button>
+    <button class="btn btn-primary" onclick="playSelectedTrack(12000,9000)">9s</button>
+    <button class="btn btn-primary" onclick="showCurrentSong()"><img src="icons/eye.svg" type="image/svg+xml" alt="Show currently selected song"></button>
     <p id="songsLeft"></p>
     <div id="currentSelectedSongInfo" style="display: none;">
         <p><strong>Currently Selected:</strong></p>

@@ -7,7 +7,22 @@ body{
     display: grid;
     place-items: center;
     height: 100vh; /* Ensure full viewport height */
+    color: #FFF;
 }
 h1{
     text-align: center;
+}
+object {
+    vertical-align: middle; /* Adjust as needed */
+}
+.btn-primary {
+    background-color: #1db954; /* Replace with your desired color */
+    border-color: #1cad4f; /* Replace with your desired color */
+  }
+.btn-primary:hover {
+    background-color: #179c46; /* Replace with your desired color */
+    border-color: #148b3e; /* Replace with your desired color */
+  }
+img[type="image/svg+xml"]{
+    filter: invert(100%) brightness(200%);
 }

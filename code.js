@@ -64,6 +64,7 @@ function initializePlayer() {
         console.log('Ready with Device ID', device_id);
         deviceId = device_id;
         fetchPlaylistTracks();
+        fetchPlaylistDetails();
     });
 
     // Not Ready
@@ -73,6 +74,29 @@ function initializePlayer() {
 
     // Connect to the player
     player.connect();
+}
+
+function fetchPlaylistDetails() {
+    fetch(`https://api.spotify.com/v1/playlists/${playlistId}`, {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + accessToken,
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to fetch playlist details. Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        playlistName = data.name;
+        document.getElementById('playlist-name').innerText = `${playlistName}`;
+    })
+    .catch(error => {
+        console.error('Error fetching playlist details:', error);
+    });
 }
 
 function fetchPlaylistTracks(offset = 0, limit = 100) {
@@ -90,6 +114,7 @@ function fetchPlaylistTracks(offset = 0, limit = 100) {
         return response.json();
     })
     .then(data => {
+        
         const newTracks = data.items;
         playlistTracks = [...playlistTracks, ...newTracks];
 
