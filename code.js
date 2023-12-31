@@ -133,6 +133,7 @@ function fetchPlaylistTracks(offset = 0, limit = 100) {
 }
 
 function selectNextRandomTrack() {
+    hideCurrentSong();
     const remainingTracks = playlistTracks.filter(track => !playedTracks.includes(track.track.uri));
 
     if (remainingTracks.length === 0) {
@@ -143,6 +144,7 @@ function selectNextRandomTrack() {
     selectedTrack = getRandomElement(remainingTracks);
     updateSongsLeft();
     updateCurrentSelectedSongInfo(selectedTrack.track);
+
 }
 
 function playSelectedTrack(startTime = 0, duration = -1) {
@@ -225,7 +227,23 @@ function resumePlayback() {
 }
 
 function showCurrentSong() {
-    document.getElementById('currentSelectedSongInfo').style.display = 'block';
+    document.getElementById('currentSelectedSongInfo').style.visibility = 'visible';
+    document.getElementById('showAnwsr').childNodes[0].src = 'icons/eye.svg';
+    
+    document.getElementById('showAnwsr').removeEventListener('click', showCurrentSong);
+    document.getElementById('showAnwsr').addEventListener('click', hideCurrentSong);
+    
+    if (selectedTrack && selectedTrack.track) {
+        updateCurrentSelectedSongInfo(selectedTrack.track);
+    }
+}
+function hideCurrentSong() {
+    document.getElementById('currentSelectedSongInfo').style.visibility = 'hidden';
+    document.getElementById('showAnwsr').childNodes[0].src = 'icons/eye-off.svg';
+
+    document.getElementById('showAnwsr').removeEventListener('click', hideCurrentSong);
+    document.getElementById('showAnwsr').addEventListener('click', showCurrentSong);
+
     if (selectedTrack && selectedTrack.track) {
         updateCurrentSelectedSongInfo(selectedTrack.track);
     }
