@@ -51,3 +51,5 @@
 ---
 
 **Made with ❤️ by n.kodem**
+
+[![Star History Chart](https://api.star-history.com/svg?repos=n-kodem/JakaToMelodia&type=Date)](https://star-history.com/#n-kodem/JakaToMelodia&Date)
