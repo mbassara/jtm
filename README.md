@@ -23,3 +23,31 @@
 5. **Interaktywny interfejs użytkownika**: Aplikacja będzie posiadała prosty i intuicyjny interfejs użytkownika, który umożliwi graczom udział w zabawie oraz prowadzącemu łatwe zarządzanie odtwarzaniem utworów.
 
 6. **Wsparcie dla różnych platform**: Aplikacja będzie dostępna jako aplikacja webowa, co umożliwi jej użytkowanie na różnych urządzeniach, takich jak komputery stacjonarne, laptopy, tablety oraz smartfony.
+
+## Instrukcja korzystania
+
+1. **Rejestracja aplikacji na stronie dewelopera Spotify**:
+   - Przejdź na stronę dewelopera Spotify: [https://developer.spotify.com/](https://developer.spotify.com/)
+   - Zaloguj się lub załóż nowe konto.
+   - Zarejestruj nową aplikację i uzyskaj dostęp do klucza klienta (clientId) oraz wedle swoich potrzeb ustaw Uri przekierowania (redirectUri).
+
+2. **Konfiguracja pliku `code.js`**:
+   - Znajdź plik `code.js` w projekcie.
+   - Zgodnie z ustawieniami aplikacji dewelopera Spotify, ustaw zmienne `clientId` i `redirectUri` na odpowiednie wartości.
+   - Ustaw zmienną `playlistId` na identyfikator playlisty ze Spotify, z której chcesz pobierać utwory do aplikacji.
+
+3. **Uruchomienie aplikacji**:
+   - Po wykonaniu konfiguracji, możesz uruchomić aplikację.
+   - Do poprawnego działania aplikacji (Z powodu api spotify) należy ją zhostować!
+
+**Po wykonaniu tych kroków, aplikacja powinna być gotowa do użytku.**
+
+*Ikony używane w projekcie pochodzą z repozytorium [Feather](https://github.com/feathericons/feather).*
+
+*Aplikacja korzysta z [Spotify Web API](https://developer.spotify.com/documentation/web-api/)*
+
+*Do poprawnego działania aplikacji wymagane jest konto Spotify Premium.*
+
+---
+
+**Made with <3 by n.kodem**
