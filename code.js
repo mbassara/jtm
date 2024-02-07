@@ -268,3 +268,13 @@ function getRandomElement(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
 }
+
+function extractPlaylistId(link) {
+    const regex = /playlist\/([a-zA-Z0-9]+)\b/;
+    const match = link.match(regex);
+    if (match && match.length > 1) {
+        return match[1];
+    } else {
+        return "";
+    }
+}
