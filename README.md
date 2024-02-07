@@ -50,4 +50,4 @@
 
 ---
 
-**Made with <3 by n.kodem**
+**Made with ❤️ by n.kodem**
