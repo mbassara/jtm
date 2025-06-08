@@ -1,7 +1,7 @@
-const clientId = 'cdb5e80c48a141e08ffc3e293a61e6c3';
-const redirectUri = 'https://n-kodem.github.io/JakaToMelodia/';
+const clientId = 'da884e1ea7a146b98728e32226b29861';
+const redirectUri = 'https://mbassara.github.io/jtm/';
 const scope = 'user-read-private user-read-email user-library-read streaming';
-const playlistId = '3tWgWGnvuRWXyrZZAHYhWU'; // https://open.spotify.com/playlist/3tWgWGnvuRWXyrZZAHYhWU?si=0a540948ec8a47c8
+const playlistId = '0NixjTMKJ0rDBFnkYJ2hqK';
 
 let accessToken;
 let deviceId;
@@ -12,6 +12,8 @@ let selectedTrack;
 
 function loginToSpotify() {
     const url = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scope)}&response_type=token`;
+
+    console.log("login to spotify", url);
 
     const spotifyAuthWindow = window.open(url, 'Spotify Auth', 'width=400,height=600');
 
